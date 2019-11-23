@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/detail_rekam_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_seniman_home_profile_layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_activity_2"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_rekam_toolbar">
+
+        <TextView
+            android:id="@+id/proses_rekam_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="124dp"
+            android:layout_marginRight="122dp"
+            android:layout_marginTop="24dp"
+            android:text="Junaidi Karo"
+            android:textColor="@color/colorWhiteText"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/proses_rekam_nama">
+
+            <TextView
+                android:id="@+id/detail_rekam_keluhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16dp"
+                tools:text="Sering merasa sakit kepala di bagian sebelah krii setiap kali seelesai berolah raga ringan maupun berat atau kegiatan yang melelahkan" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:isScrollContainer="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_seniman_home_profile_layoutHeader">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="180dp"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_seniman_home_profile_layoutHeader">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_account_circle_black_24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:enabled="true"
+                            android:id="@+id/detail_rekam_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="ID Rekam Medis"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/date"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_tgl"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Tgl Rekam"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_user_64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_dokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Nama Dokter Pemeriksa"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_user_64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img4"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_pasien"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Nama Pasien"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_user_64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img5"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_operator"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Nama Operator"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img6"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_temperature"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img6"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_suhu"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Suhu"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img7"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_scale"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img7"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_berat"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Berat"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img8"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_scale"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img8"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_tinggi"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Tinggi"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img9"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_blood"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img9"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_darah"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/form_content_height"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Tekanan Darah"
+                            android:inputType="text"
+                            android:padding="@dimen/form_content_padding"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <ImageView
+                        android:id="@+id/detail_rekam_img11"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/list"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.74" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="@dimen/form_textInputLayout_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginLeft="@dimen/form_textInputLayout_marginLeft"
+                        android:layout_marginRight="@dimen/form_textInputLayout_marginRight"
+                        android:layout_marginStart="@dimen/form_textInputLayout_marginLeft"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/detail_rekam_img11"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/detail_rekam_diagnosis"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="@dimen/form_content_marginTop"
+                            android:ems="10"
+                            android:hint="Diagnosis"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/form_content_padding"
+                            android:scrollbars="vertical"
+                            android:textColorHint="@color/colorSecondaryText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/primaryTextBlack"
+                    android:textSize="16sp"
+                    android:text="Daftar Obat :"/>
+
+                <android.support.v7.widget.com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/detail_rekam_com.google.android.material.textfield.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                </android.support.v7.widget.com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
